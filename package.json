@@ -1,0 +1,29 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Sam template with cors and multiple stages",
+  "main": "index.js",
+  "scripts": {
+    "build:poc": "sam deploy --parameter-overrides ParameterKey=StageName,ParameterValue=poc",
+    "build:dev": "sam deploy --parameter-overrides ParameterKey=StageName,ParameterValue=dev",
+    "build:uat": "sam deploy --parameter-overrides ParameterKey=StageName,ParameterValue=uat",
+    "build:prod": "sam deploy --parameter-overrides ParameterKey=StageName,ParameterValue=prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techarshgupta/SAM-template.git"
+  },
+  "keywords": [
+    "SAM",
+    "AWS",
+    "CORS",
+    "Stages",
+    "SAM-CLI"
+  ],
+  "author": "Harsh Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techarshgupta/SAM-template/issues"
+  },
+  "homepage": "https://github.com/techarshgupta/SAM-template#readme"
+}
