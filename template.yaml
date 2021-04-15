@@ -48,18 +48,18 @@ Resources:
             Method: get
 
 Outputs:
-  BasicAWSApiGateway:
+  RestApi:
     Description: 'API Gateway endpoint URL for Staging stage for Hello World function'
-    Value: !Sub 'https://${BasicAWSApiGateway}.execute-api.${AWS::Region}.amazonaws.com/${StageName}/hello/'
-  BasicAWSApiGatewayRestApiId:
+    Value: !Sub 'https://${RestApi}.execute-api.${AWS::Region}.amazonaws.com/${StageName}/hello/'
+  RestApi:
     Description: 'API Gateway ARN for Basic AWS API Gateway'
-    Value: !Ref BasicAWSApiGateway
+    Value: !Ref RestApi
     Export:
-      Name: BasicAWSApiGateway-RestApiId
-  BasicAWSApiGatewayRootResourceId:
-    Value: !GetAtt BasicAWSApiGateway.RootResourceId
+      Name: RestApi-RestApiId
+  RestApiRootResourceId:
+    Value: !GetAtt RestApi.RootResourceId
     Export:
-      Name: BasicAWSApiGateway-RootResourceId
+      Name: RestApi-RootResourceId
   # HelloWorldApi:
   #   Description: "API Gateway endpoint URL for Prod stage for Hello World function"
   #   Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"

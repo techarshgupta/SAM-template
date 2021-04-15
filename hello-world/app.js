@@ -23,7 +23,7 @@ exports.lambdaHandler = async (event, context) => {
                 "Access-Control-Allow-Origin": "*",
             },
             'body': JSON.stringify({
-                message: 'Hello cors test uat',
+                message: 'Hello cors test with stages',
                 // location: ret.data.trim()
             })
         }
